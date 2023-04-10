@@ -39,26 +39,20 @@ def get_pets_by_breed(pet_shop, breed):
 
     return breed_list
 
-#8 - Couldn't get this one to work
+#8
 def find_pet_by_name(pet_shop, pet_name):
-    pet_list = pet_shop["pets"]
-
-    for pet in pet_list:
-        if pet["name"] == pet_name:
-            return pet_name
-        elif pet["name"] != pet_name:
-            return None
-        else:
-            break
-
-#9 - Couldn't get this one to work
-def remove_pet_by_name(pet_shop, name):
-
     for pet in pet_shop["pets"]:
-        if pet["name"] == name:
-            return pet_shop["pets"].remove(pet)
-        return True
-    return False
+        if pet["name"] == pet_name:
+            return pet
+    return None
+
+#9 
+def remove_pet_by_name(pet_shop, pet_name):
+
+     for pet in pet_shop["pets"]:
+        if pet["name"] == pet_name:
+            pet_shop["pets"].remove(pet)
+        
 
 #10
 def add_pet_to_stock(pet_shop, new_pet):
